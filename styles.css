@@ -198,3 +198,19 @@ button:hover {
     line-height: 1.7;
     margin-top: 20px;
 }
+
+
+
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.conteudo {
+    flex: 1;
+}
