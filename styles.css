@@ -50,6 +50,20 @@ header {
     color: var(--verde);
 }
 
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 10px; /* pode ajustar */
+}
+
+
 .menu a {
     margin-left: 20px;
     font-weight: 500;
@@ -211,6 +225,14 @@ body {
     flex-direction: column;
 }
 
-.conteudo {
+.conteudoequipe {
+    flex: 1;
+}
+
+.conteudoserv {
+    flex: 1;
+}
+
+.conteudocontat {
     flex: 1;
 }
