@@ -9,17 +9,13 @@
 /* ===== CABEÇALHO ===== */
 .cabecalho {
     width: 100%;
-    background-color: #fff; /* Adicione uma cor de fundo se necessário */
 }
 
-/* Container principal */
 .container-cabecalho {
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px 40px;
+    padding: 20px 40px; /* Aumentei o padding nas laterais */
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Isso coloca um na esquerda e outro na direita */
     align-items: center;
 }
 
@@ -46,12 +42,11 @@
 .texto-logo span {
     font-size: 12px;
     color: #666; /* Cinza para o texto */
-    display: block;
 }
 
 /* ===== NAVEGAÇÃO (DIREITA) ===== */
 .navegacao-principal {
-    /* Navegação já está automaticamente na direita por causa do justify-content: space-between */
+    /* Não precisa de nada aqui, o justify-content: space-between já cuida */
 }
 
 .menu-navegacao {
@@ -59,8 +54,11 @@
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 30px;
-    align-items: center;
+    gap: 25px;
+}
+
+.menu-navegacao li {
+    display: inline-block;
 }
 
 .menu-navegacao li a {
@@ -68,7 +66,6 @@
     color: #333;
     font-weight: 500;
     font-size: 16px;
-    transition: color 0.3s ease;
 }
 
 .menu-navegacao li a:hover {
@@ -77,63 +74,17 @@
 
 /* Botão de contato especial */
 .botao-contato {
-    background-color: #2e7d32; /* Verde principal */
-    color: white !important;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    background-color: #2e7d32;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 500;
 }
 
 .botao-contato:hover {
-    background-color: #1b5e20; /* Verde mais escuro no hover */
+    background-color: #1b5e20;
     color: white;
 }
-
-/* ===== RESPONSIVIDADE (OPCIONAL) ===== */
-@media (max-width: 768px) {
-    .container-cabecalho {
-        flex-direction: column;
-        gap: 20px;
-        padding: 15px 20px;
-    }
-    
-    .logo-clinica {
-        width: 100%;
-        justify-content: center;
-    }
-    
-    .menu-navegacao {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-    }
-    
-    .menu-navegacao li a {
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 480px) {
-    .menu-navegacao {
-        flex-direction: column;
-        gap: 10px;
-        align-items: center;
-    }
-    
-    .menu-navegacao li {
-        width: 100%;
-        text-align: center;
-    }
-    
-    .botao-contato {
-        padding: 8px 16px;
-    }
-}
-
-
-
-
-
 
 html, body {
     height: 100%;
