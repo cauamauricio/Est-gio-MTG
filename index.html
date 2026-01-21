@@ -2,81 +2,88 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Clínica MTG</title>
+    <title>MTG - Medicina do Trabalho de Guanambi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<header>
-    <div class="container nav">
-       
-        <div class="logo-area">
-    <img src="./image/mtglogo.png" alt="Foto da Clínica MTG" class="logo-img">
-    <div class="logo">MEDICINA DO TRABALHO DE GUANAMBI</div>
+    <!-- ================= HEADER / NAVBAR ================= -->
+<header class="cabecalho">
+    <div class="container-cabecalho">
+
+        <!-- LOGO + TÍTULO (ESQUERDA) -->
+        <div class="logo-clinica">
+            <img src="./image/mtglogo.png" alt="Logo MTG" class="logo-imagem">
+
+            <div class="texto-logo">
+                <h1>MTG</h1>
+                <span>Medicina do Trabalho de Guanambi</span>
+            </div>
         </div>
 
-        <nav class="menu">
-            <a href="index.html">Início</a>
-            <a href="sobre.html">Sobre</a>
-            <a href="servicos.html">Serviços</a>
-            <a href="equipe.html">Equipe</a>
-            <a href="contato.html">Contato</a>
+        <!-- NAV (DIREITA) -->
+        <nav class="navegacao-principal">
+            <ul class="menu-navegacao">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="equipe.html">Equipe</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html" class="botao-contato">Contato</a></li>
+            </ul>
         </nav>
+
     </div>
 </header>
 
-<section class="hero">
-    <div class="container">
-        <h1>Cuidando da sua saúde com excelência</h1>
-        <p>Atendimento humanizado, tecnologia moderna e profissionais qualificados</p>
-    </div>
-</section>
+<main>
+    <!-- ================= HERO / DESTAQUE ================= -->
+    <section id="inicio" class="secao-destaque">
+        <div class="conteudo-destaque">
+            <h2>Saúde ocupacional com responsabilidade e excelência</h2>
+            <p>
+                A MTG oferece soluções completas em medicina do trabalho,
+                promovendo segurança, bem-estar e conformidade legal
+                para empresas e colaboradores.
+            </p>
+            <a href="servicos.html" class="botao-principal">Conheça nossos serviços</a>
+        </div>
 
-<section class="section">
-    <div class="container">
-        <div class="section-title">
-            <h2>Nossos Diferenciais</h2>
+        <div class="imagem-destaque">
+            <img src="./image/mtglogo.png" alt="Clínica MTG Medicina do Trabalho">
         </div>
-        <div class="cards">
-            <div class="card">
-                <h3>Profissionais Qualificados</h3>
-                <p>Equipe altamente capacitada e em constante atualização.</p>
-            </div>
-            <div class="card">
-                <h3>Estrutura Moderna</h3>
-                <p>Ambientes confortáveis e equipamentos de última geração.</p>
-            </div>
-            <div class="card">
-                <h3>Atendimento Humanizado</h3>
-                <p>Respeito, cuidado e atenção em cada consulta.</p>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
 
-<footer>
-    <div class="container footer-grid">
-        <div>
-            <h4>Clínica MTG</h4>
-            <p>Cuidando de você e da sua família.</p>
+    <!-- ================= BENEFÍCIOS ================= -->
+    <section class="secao-beneficios">
+        <div class="beneficio">
+            <h3>Atendimento humanizado</h3>
+            <p>Foco no cuidado com o trabalhador e na ética profissional.</p>
         </div>
-        <div>
-            <h4>Contato</h4>
-            <p>📞 (77) 3451-3721/ (77) 9925-8880</p>
-            <a href="mailto:sst@mtggbi.com">
-                <img src="https://icon-icons.com/icons/png/147283/25667/" alt="sst@mtggbi.com" width="64" height="64">
-            </a>
 
+        <div class="beneficio">
+            <h3>Conformidade legal</h3>
+            <p>Atuamos conforme as normas regulamentadoras vigentes.</p>
         </div>
-        <div>
-            <h4>Endereço</h4>
-            <p>R. Gustavo Bezerra, 273 - Centro, Guanambi - BA, 46430-000, Brazil</p>
+
+        <div class="beneficio">
+            <h3>Equipe especializada</h3>
+            <p>Profissionais qualificados e experientes em saúde ocupacional.</p>
         </div>
-    </div>
-    <div class="footer-bottom">
-        © 2026 Clínica MTG - Todos os direitos reservados
-    </div>
-</footer>
+
+        <div class="beneficio">
+            <h3>Agilidade e confiança</h3>
+            <p>Processos eficientes para empresas de todos os portes.</p>
+        </div>
+    </section>
+</main>
+
+
+    <!-- ================= RODAPÉ ================= -->
+    <footer class="rodape">
+        <p>© 2026 MTG - Medicina do Trabalho de Guanambi</p>
+        <p>Site institucional • Sem coleta de dados pessoais</p>
+    </footer>
 
 </body>
 </html>

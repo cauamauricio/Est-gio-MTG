@@ -1,11 +1,4 @@
-:root {
-    --verde: #2e8b57;
-    --verde-claro: #e6f4ec;
-    --branco: #ffffff;
-    --cinza: #f5f5f5;
-    --texto: #333;
-}
-
+/* ===== RESET ===== */
 * {
     margin: 0;
     padding: 0;
@@ -13,205 +6,131 @@
     font-family: 'Segoe UI', Arial, sans-serif;
 }
 
-body {
-    background-color: var(--branco);
-    color: var(--texto);
+/* ===== CABEÇALHO ===== */
+.cabecalho {
+    width: 100%;
+    background-color: #fff; /* Adicione uma cor de fundo se necessário */
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-header {
-    background: var(--branco);
-    border-bottom: 1px solid #ddd;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-}
-
-.container {
-    width: 90%;
+/* Container principal */
+.container-cabecalho {
+    width: 100%;
     max-width: 1200px;
-    margin: auto;
-}
-
-.nav {
+    margin: 0 auto;
+    padding: 20px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: var(--verde);
-}
-
-.logo-area {
+/* ===== LOGO COM IMAGEM (ESQUERDA) ===== */
+.logo-clinica {
     display: flex;
     align-items: center;
     gap: 12px;
 }
 
-.logo-img {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    border-radius: 10px; /* pode ajustar */
+/* imagem do logo */
+.logo-imagem {
+    width: 48px;
+    height: auto;
 }
 
-
-.menu a {
-    margin-left: 20px;
-    font-weight: 500;
+/* texto do logo */
+.texto-logo h1 {
+    font-size: 28px;
+    color: #2e7d32; /* Verde principal */
+    line-height: 1;
 }
 
-.menu a:hover {
-    color: var(--verde);
+.texto-logo span {
+    font-size: 12px;
+    color: #666; /* Cinza para o texto */
+    display: block;
 }
 
-.hero {
-    background: linear-gradient(rgba(46,139,87,0.85), rgba(46,139,87,0.85)),
-                url('https://images.unsplash.com/photo-1588776814546-1ffcf47267a5') center/cover;
-    color: white;
-    padding: 120px 0;
-    text-align: center;
+/* ===== NAVEGAÇÃO (DIREITA) ===== */
+.navegacao-principal {
+    /* Navegação já está automaticamente na direita por causa do justify-content: space-between */
 }
 
-.hero h1 {
-    font-size: 42px;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 18px;
-    margin-bottom: 30px;
-}
-
-.btn {
-    background: white;
-    color: var(--verde);
-    padding: 15px 30px;
-    border-radius: 30px;
-    font-weight: bold;
-    display: inline-block;
-}
-
-.section {
-    padding: 80px 0;
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.section-title h2 {
-    font-size: 32px;
-    color: var(--verde);
-}
-
-.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-}
-
-.card {
-    background: var(--branco);
-    border-radius: 12px;
-    padding: 30px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-    text-align: center;
-}
-
-.card h3 {
-    margin-bottom: 15px;
-    color: var(--verde);
-}
-
-.card p {
-    font-size: 15px;
-}
-
-footer {
-    background: var(--verde);
-    color: white;
-    padding: 40px 0;
-}
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+.menu-navegacao {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
     gap: 30px;
+    align-items: center;
 }
 
-footer h4 {
-    margin-bottom: 15px;
-}
-
-footer p, footer a {
-    font-size: 14px;
-}
-
-.footer-bottom {
-    text-align: center;
-    margin-top: 30px;
-    font-size: 13px;
-    opacity: 0.8;
-}
-
-form {
-    max-width: 600px;
-    margin: auto;
-}
-
-input, textarea, select {
-    width: 100%;
-    padding: 14px;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-}
-
-button {
-    background: var(--verde);
-    color: white;
-    padding: 14px;
-    border: none;
-    width: 100%;
-    border-radius: 30px;
+.menu-navegacao li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
     font-size: 16px;
-    cursor: pointer;
+    transition: color 0.3s ease;
 }
 
-button:hover {
-    opacity: 0.9;
+.menu-navegacao li a:hover {
+    color: #2e7d32; /* Verde principal no hover */
+}
+
+/* Botão de contato especial */
+.botao-contato {
+    background-color: #2e7d32; /* Verde principal */
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.botao-contato:hover {
+    background-color: #1b5e20; /* Verde mais escuro no hover */
+    color: white;
+}
+
+/* ===== RESPONSIVIDADE (OPCIONAL) ===== */
+@media (max-width: 768px) {
+    .container-cabecalho {
+        flex-direction: column;
+        gap: 20px;
+        padding: 15px 20px;
+    }
+    
+    .logo-clinica {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .menu-navegacao {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .menu-navegacao li a {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-navegacao {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+    
+    .menu-navegacao li {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .botao-contato {
+        padding: 8px 16px;
+    }
 }
 
 
-.sobre-destaque {
-    background: var(--verde-claro);
-}
-
-.sobre-box {
-    max-width: 800px;
-    margin: auto;
-    background: white;
-    padding: 50px;
-    border-radius: 16px;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-}
-
-.sobre-box p {
-    font-size: 17px;
-    line-height: 1.7;
-    margin-top: 20px;
-}
 
 
 
@@ -225,14 +144,310 @@ body {
     flex-direction: column;
 }
 
-.conteudoequipe {
+main {
     flex: 1;
 }
 
-.conteudoserv {
-    flex: 1;
+
+/* ===== VARIÁVEIS ===== */
+:root {
+    --verde-principal: #1f9d55;
+    --verde-escuro: #14733f;
+    --verde-claro: #e6f4ec;
+    --branco: #ffffff;
+    --cinza-texto: #444;
+    --sombra-suave: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
-.conteudocontat {
-    flex: 1;
+/* ===== HEADER ===== */
+.cabecalho {
+    background-color: var(--branco);
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.container-cabecalho {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-clinica h1 {
+    color: var(--verde-principal);
+    font-size: 30px;
+}
+
+.logo-clinica span {
+    font-size: 13px;
+    color: var(--cinza-texto);
+}
+
+/* ===== NAV ===== */
+.menu-navegacao {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.menu-navegacao a {
+    text-decoration: none;
+    color: var(--cinza-texto);
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s;
+}
+
+/* underline animado */
+.menu-navegacao a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background-color: var(--verde-principal);
+    transition: width 0.3s ease;
+}
+
+.menu-navegacao a:hover {
+    color: var(--verde-principal);
+}
+
+.menu-navegacao a:hover::after {
+    width: 100%;
+}
+
+.botao-contato {
+    padding: 10px 18px;
+    background-color: var(--verde-principal);
+    color: var(--branco) !important;
+    border-radius: 6px;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+.botao-contato:hover {
+    background-color: var(--verde-escuro);
+    transform: translateY(-2px);
+    box-shadow: var(--sombra-suave);
+}
+
+/* ===== HERO ===== */
+.secao-destaque {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px;
+    background: linear-gradient(120deg, var(--verde-claro), #f7fbf9);
+}
+
+.conteudo-destaque {
+    max-width: 520px;
+}
+
+.conteudo-destaque h2 {
+    font-size: 40px;
+    color: var(--verde-principal);
+    margin-bottom: 20px;
+}
+
+.conteudo-destaque p {
+    color: var(--cinza-texto);
+    margin-bottom: 35px;
+    line-height: 1.7;
+}
+
+/* ===== BOTÃO PRINCIPAL ===== */
+.botao-principal {
+    background-color: var(--verde-principal);
+    color: var(--branco);
+    padding: 16px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+.botao-principal:hover {
+    background-color: var(--verde-escuro);
+    transform: translateY(-3px);
+    box-shadow: var(--sombra-suave);
+}
+
+.imagem-destaque img {
+    max-width: 440px;
+    border-radius: 16px;
+    box-shadow: var(--sombra-suave);
+}
+
+/* ===== BENEFÍCIOS ===== */
+.secao-beneficios {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 60px 80px;
+    background-color: #0f2f1f;
+    color: var(--branco);
+    text-align: center;
+}
+
+.beneficio {
+    padding: 20px;
+}
+
+.beneficio h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.beneficio p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* ===== SERVIÇOS ===== */
+.secao-servicos {
+    padding: 80px;
+    background-color: #f9fdfb;
+}
+
+.titulo-secao {
+    text-align: center;
+    color: var(--verde-principal);
+    margin-bottom: 50px;
+    font-size: 34px;
+}
+
+.lista-servicos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.card-servico {
+    background-color: var(--branco);
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: var(--sombra-suave);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-servico h3 {
+    color: var(--verde-principal);
+    margin-bottom: 10px;
+}
+
+.card-servico p {
+    color: var(--cinza-texto);
+    line-height: 1.5;
+}
+
+.card-servico:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== RODAPÉ ===== */
+.rodape {
+    background-color: var(--verde-principal);
+    color: var(--branco);
+    text-align: center;
+    padding: 30px;
+    font-size: 14px;
+}
+
+
+
+/* ===== HERO INTERNO DAS PÁGINAS ===== */
+.hero-interno {
+    background: linear-gradient(120deg, var(--verde-principal), #28b463);
+    color: var(--branco);
+    padding: 70px 80px;
+}
+
+.hero-interno h2 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.hero-interno p {
+    max-width: 600px;
+    opacity: 0.95;
+    line-height: 1.6;
+}
+
+/* ===== SEÇÕES INTERNAS ===== */
+.secao-interna {
+    padding: 80px;
+    background-color: #f9fdfb;
+}
+
+.secao-interna.alternada {
+    background-color: var(--verde-claro);
+}
+
+/* ===== GRID ESTILIZADO ===== */
+.grid-conteudo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* ===== CARD AVANÇADO ===== */
+.card-avancado {
+    background-color: var(--branco);
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: var(--sombra-suave);
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-avancado::before {
+    content: "";
+    width: 6px;
+    height: 100%;
+    background-color: var(--verde-principal);
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 18px 0 0 18px;
+}
+
+.card-avancado:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+}
+
+.card-avancado h3 {
+    color: var(--verde-principal);
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+
+.card-avancado p {
+    color: var(--cinza-texto);
+    line-height: 1.6;
+}
+
+/* ===== LISTA DESTACADA ===== */
+.lista-destaque {
+    margin-top: 20px;
+    list-style: none;
+}
+
+.lista-destaque li {
+    padding-left: 25px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.lista-destaque li::before {
+    content: "✔";
+    color: var(--verde-principal);
+    position: absolute;
+    left: 0;
 }
