@@ -6,83 +6,144 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="pagina-home">
 
-    <!-- ================= HEADER / NAVBAR ================= -->
+
 <header class="cabecalho">
     <div class="container-cabecalho">
-
-        <!-- LOGO + TÍTULO (ESQUERDA) -->
         <div class="logo-clinica">
             <img src="./image/mtglogo.png" alt="Logo MTG" class="logo-imagem">
-            <div class="texto-logo">
-                <h1>MTG</h1>
-                <span>Medicina do Trabalho de Guanambi</span>
-            </div>
         </div>
 
-        <!-- NAV (DIREITA) -->
-        <nav class="navegacao-principal">
+        <nav>
             <ul class="menu-navegacao">
                 <li><a href="index.html">Início</a></li>
                 <li><a href="servicos.html">Serviços</a></li>
-                <li><a href="equipe.html">Equipe</a></li>
                 <li><a href="sobre.html">Sobre</a></li>
                 <li><a href="contato.html" class="botao-contato">Contato</a></li>
             </ul>
         </nav>
-
     </div>
 </header>
 
 <main>
-    <!-- ================= HERO / DESTAQUE ================= -->
-    <section id="inicio" class="secao-destaque">
-        <div class="conteudo-destaque">
-            <h2>Saúde ocupacional com responsabilidade e excelência</h2>
-            <p>
-                A MTG oferece soluções completas em medicina do trabalho,
-                promovendo segurança, bem-estar e conformidade legal
-                para empresas e colaboradores.
-            </p>
-            <a href="servicos.html" class="botao-principal">Conheça nossos serviços</a>
+
+<!-- HERO -->
+<section class="hero-home">
+    <div class="hero-overlay"></div>
+    <div class="hero-conteudo">
+        <h2>Reduza riscos e aumente a produtividade da sua equipe</h2>
+        <p>Soluções completas em medicina e segurança do trabalho, com excelência técnica e conformidade legal.</p>
+        <a href="contato.html" class="botao-principal">Fale conosco</a>
+    </div>
+</section>
+
+<!-- CARDS DIFERENCIAIS -->
+<section class="secao-cards">
+    <div class="cards-grid">
+
+        <div class="card-glass">
+            <h3>Qualificação</h3>
+            <p>Equipe técnica especializada em saúde e segurança do trabalho.</p>
         </div>
 
-        <div class="imagem-destaque">
-            <img src="./image/mtglogo.png" alt="Clínica MTG Medicina do Trabalho">
-        </div>
-    </section>
-
-    <!-- ================= BENEFÍCIOS ================= -->
-    <section class="secao-beneficios">
-        <div class="beneficio">
-            <h3>Atendimento humanizado</h3>
-            <p>Foco no cuidado com o trabalhador e na ética profissional.</p>
+        <div class="card-glass">
+            <h3>Convênios</h3>
+            <p>Atendimento a empresas de diversos portes e segmentos.</p>
         </div>
 
-        <div class="beneficio">
-            <h3>Conformidade legal</h3>
-            <p>Atuamos conforme as normas regulamentadoras vigentes.</p>
+        <div class="card-glass">
+            <h3>Experiência</h3>
+            <p>Atuação consolidada em medicina e segurança ocupacional.</p>
         </div>
 
-        <div class="beneficio">
-            <h3>Equipe especializada</h3>
-            <p>Profissionais qualificados e experientes em saúde ocupacional.</p>
+        <div class="card-glass">
+            <h3>Conforto</h3>
+            <p>Estrutura preparada para um atendimento ágil e eficiente.</p>
         </div>
 
-        <div class="beneficio">
-            <h3>Agilidade e confiança</h3>
-            <p>Processos eficientes para empresas de todos os portes.</p>
+    </div>
+</section>
+
+<!-- MEDICINA DO TRABALHO -->
+<section class="secao-servico">
+    <div class="servico-texto">
+        <h2>Medicina do Trabalho</h2>
+        <p>
+            Atuamos na prevenção de doenças ocupacionais, promoção da saúde
+            e garantia da conformidade legal das empresas.
+        </p>
+
+        <ul>
+            <li>Exames ocupacionais completos</li>
+            <li>PCMSO – NR-07</li>
+            <li>Gestão de saúde do trabalhador</li>
+            <li>Laudos e atestados médicos</li>
+        </ul>
+    </div>
+
+    <div class="servico-imagem">
+        <img src="./image/medicina.jpg" alt="Medicina do Trabalho">
+    </div>
+</section>
+
+<!-- SEGURANÇA DO TRABALHO -->
+<section class="secao-servico invertido">
+    <div class="servico-texto">
+        <h2>Segurança do Trabalho</h2>
+        <p>
+            Identificação, avaliação e controle de riscos ocupacionais,
+            com base nas Normas Regulamentadoras.
+        </p>
+
+        <ul>
+            <li>PGR, LTCAT e laudos técnicos</li>
+            <li>Treinamentos legais</li>
+            <li>Gestão de riscos</li>
+            <li>Conformidade normativa</li>
+        </ul>
+    </div>
+
+    <div class="servico-imagem">
+        <img src="./image/seguranca.jpg" alt="Segurança do Trabalho">
+    </div>
+</section>
+
+<!-- AVALIAÇÕES / CARROSSEL -->
+<section class="secao-avaliacoes">
+    <h2>Avaliações</h2>
+
+    <div class="carrossel">
+        <div class="slide">
+            <img src="./image/avaliacao1.jpg" alt="Avaliação 1">
         </div>
-    </section>
+        <div class="slide">
+            <img src="./image/avaliacao2.jpg" alt="Avaliação 2">
+        </div>
+        <div class="slide">
+            <img src="./image/avaliacao3.jpg" alt="Avaliação 3">
+        </div>
+        <div class="slide">
+            <img src="./image/avaliacao4.jpg" alt="Avaliação 4">
+        </div>
+        <div class="slide">
+            <img src="./image/avaliacao5.jpg" alt="Avaliação 5">
+        </div>
+        <div class="slide">
+            <img src="./image/avaliacao6.jpg" alt="Avaliação 6">
+        </div>
+        <div class="slide">
+            <img src="./image/avaliacao7.jpg" alt="Avaliação 7">
+        </div>
+    </div>
+</section>
+
+
 </main>
 
-
-    <!-- ================= RODAPÉ ================= -->
-    <footer class="rodape">
-        <p>© 2026 MTG - Medicina do Trabalho de Guanambi</p>
-        <p>Site institucional • Sem coleta de dados pessoais</p>
-    </footer>
+<footer class="rodape">
+    <p>© 2026 MTG - Medicina do Trabalho de Guanambi</p>
+</footer>
 
 </body>
 </html>
