@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <title>Contato | MTG</title>
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Font Awesome (ícones) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
@@ -31,32 +34,54 @@
 <main>
 
 <section class="hero-interno">
-    <h2>Fale com a MTG</h2>
-    <p>
-        Entre em contato conosco para mais informações
-        sobre nossos serviços.
-    </p>
+    <h2>Entre em contato</h2>
+    <p>Escolha uma das opções abaixo para falar com a MTG.</p>
 </section>
 
-<section class="secao-interna alternada">
-    <div class="grid-conteudo">
+<section class="secao-contato">
 
-        <div class="card-avancado">
-            <h3>Endereço</h3>
-            <p>Guanambi – Bahia</p>
-        </div>
+    <!-- Endereço (central) -->
+    <div class="card-endereco">
+        <i class="fa-solid fa-location-dot"></i>
+        <h3>Endereço</h3>
+        <p>Guanambi - Bahia</p>
+    </div>
 
-        <div class="card-avancado">
+    <!-- Cards de contato -->
+    <div class="grid-contato">
+
+        <a href="mailto:contato@mtg.com.br" class="card-contato">
+            <i class="fa-solid fa-envelope"></i>
+            <h3>Email</h3>
+            <span>exemplodeemail@gmail.com</span>
+        </a>
+
+        <a href="https://wa.me/5577999999999" target="_blank" class="card-contato whatsapp">
+            <i class="fa-brands fa-whatsapp"></i>
+            <h3>WhatsApp</h3>
+            <span>Fale conosco</span>
+        </a>
+
+        <a href="tel:+5577999999999" class="card-contato">
+            <i class="fa-solid fa-phone"></i>
             <h3>Telefone</h3>
-            <p>(XX) XXXX-XXXX</p>
-        </div>
+            <span>(77) 99999-9999</span>
+        </a>
 
-        <div class="card-avancado">
-            <h3>Horário de atendimento</h3>
-            <p>Segunda a sexta-feira<br>08h às 17h</p>
-        </div>
+        <a href="https://instagram.com/exemplo" target="_blank" class="card-contato instagram">
+            <i class="fa-brands fa-instagram"></i>
+            <h3>Instagram</h3>
+            <span>@mtg</span>
+        </a>
+
+        <a href="https://facebook.com/exemplo" target="_blank" class="card-contato facebook">
+            <i class="fa-brands fa-facebook"></i>
+            <h3>Facebook</h3>
+            <span>MTG</span>
+        </a>
 
     </div>
+
 </section>
 
 </main>

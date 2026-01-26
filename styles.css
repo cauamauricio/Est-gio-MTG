@@ -1,89 +1,11 @@
-/* ===== RESET ===== */
+/* =========================================================
+   RESET GLOBAL - base do site inteiro
+========================================================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Arial, sans-serif;
-}
-
-/* ===== CABEÇALHO ===== */
-.cabecalho {
-    width: 100%;
-}
-
-.container-cabecalho {
-    width: 100%;
-    padding: 20px 40px; /* Aumentei o padding nas laterais */
-    display: flex;
-    justify-content: space-between; /* Isso coloca um na esquerda e outro na direita */
-    align-items: center;
-}
-
-/* ===== LOGO COM IMAGEM (ESQUERDA) ===== */
-.logo-clinica {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-/* imagem do logo */
-.logo-imagem {
-    width: 48px;
-    height: auto;
-}
-
-/* texto do logo */
-.texto-logo h1 {
-    font-size: 28px;
-    color: #2e7d32; /* Verde principal */
-    line-height: 1;
-}
-
-.texto-logo span {
-    font-size: 12px;
-    color: #666; /* Cinza para o texto */
-}
-
-/* ===== NAVEGAÇÃO (DIREITA) ===== */
-.navegacao-principal {
-    /* Não precisa de nada aqui, o justify-content: space-between já cuida */
-}
-
-.menu-navegacao {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 25px;
-}
-
-.menu-navegacao li {
-    display: inline-block;
-}
-
-.menu-navegacao li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    font-size: 16px;
-}
-
-.menu-navegacao li a:hover {
-    color: #2e7d32; /* Verde principal no hover */
-}
-
-/* Botão de contato especial */
-.botao-contato {
-    background-color: #2e7d32;
-    color: white;
-    padding: 8px 16px;
-    border-radius: 4px;
-    font-weight: 500;
-}
-
-.botao-contato:hover {
-    background-color: #1b5e20;
-    color: white;
 }
 
 html, body {
@@ -100,7 +22,9 @@ main {
 }
 
 
-/* ===== VARIÁVEIS ===== */
+/* =========================================================
+   VARIÁVEIS DE CORES E PADRÕES DO SITE
+========================================================= */
 :root {
     --verde-principal: #1f9d55;
     --verde-escuro: #14733f;
@@ -110,8 +34,12 @@ main {
     --sombra-suave: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
-/* ===== HEADER ===== */
+
+/* =========================================================
+   HEADER / NAVBAR - usado em TODAS as páginas
+========================================================= */
 .cabecalho {
+    width: 100%;
     background-color: var(--branco);
     border-bottom: 1px solid #ddd;
     position: sticky;
@@ -128,17 +56,30 @@ main {
     align-items: center;
 }
 
-.logo-clinica h1 {
-    color: var(--verde-principal);
-    font-size: 30px;
+/* LOGO */
+.logo-clinica {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
-.logo-clinica span {
+.logo-imagem {
+    width: 48px;
+    height: auto;
+}
+
+.texto-logo h1 {
+    font-size: 30px;
+    color: var(--verde-principal);
+    line-height: 1;
+}
+
+.texto-logo span {
     font-size: 13px;
     color: var(--cinza-texto);
 }
 
-/* ===== NAV ===== */
+/* MENU */
 .menu-navegacao {
     list-style: none;
     display: flex;
@@ -153,7 +94,7 @@ main {
     transition: color 0.3s;
 }
 
-/* underline animado */
+/* underline animado do menu */
 .menu-navegacao a::after {
     content: "";
     position: absolute;
@@ -173,6 +114,7 @@ main {
     width: 100%;
 }
 
+/* botão contato do menu */
 .botao-contato {
     padding: 10px 18px;
     background-color: var(--verde-principal);
@@ -187,132 +129,12 @@ main {
     box-shadow: var(--sombra-suave);
 }
 
-/* ===== HERO ===== */
-.secao-destaque {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 80px;
-    background: linear-gradient(120deg, var(--verde-claro), #f7fbf9);
-}
 
-.conteudo-destaque {
-    max-width: 520px;
-}
+/* =========================================================
+   COMPONENTES REUTILIZÁVEIS (usados em várias páginas)
+========================================================= */
 
-.conteudo-destaque h2 {
-    font-size: 40px;
-    color: var(--verde-principal);
-    margin-bottom: 20px;
-}
-
-.conteudo-destaque p {
-    color: var(--cinza-texto);
-    margin-bottom: 35px;
-    line-height: 1.7;
-}
-
-/* ===== BOTÃO PRINCIPAL ===== */
-.botao-principal {
-    background-color: var(--verde-principal);
-    color: var(--branco);
-    padding: 16px 28px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
-}
-
-.botao-principal:hover {
-    background-color: var(--verde-escuro);
-    transform: translateY(-3px);
-    box-shadow: var(--sombra-suave);
-}
-
-.imagem-destaque img {
-    max-width: 440px;
-    border-radius: 16px;
-    box-shadow: var(--sombra-suave);
-}
-
-/* ===== BENEFÍCIOS ===== */
-.secao-beneficios {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    padding: 60px 80px;
-    background-color: #0f2f1f;
-    color: var(--branco);
-    text-align: center;
-}
-
-.beneficio {
-    padding: 20px;
-}
-
-.beneficio h3 {
-    margin-bottom: 10px;
-    font-size: 18px;
-}
-
-.beneficio p {
-    font-size: 14px;
-    opacity: 0.9;
-}
-
-/* ===== SERVIÇOS ===== */
-.secao-servicos {
-    padding: 80px;
-    background-color: #f9fdfb;
-}
-
-.titulo-secao {
-    text-align: center;
-    color: var(--verde-principal);
-    margin-bottom: 50px;
-    font-size: 34px;
-}
-
-.lista-servicos {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
-}
-
-.card-servico {
-    background-color: var(--branco);
-    padding: 30px;
-    border-radius: 14px;
-    box-shadow: var(--sombra-suave);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.card-servico h3 {
-    color: var(--verde-principal);
-    margin-bottom: 10px;
-}
-
-.card-servico p {
-    color: var(--cinza-texto);
-    line-height: 1.5;
-}
-
-.card-servico:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.12);
-}
-
-/* ===== RODAPÉ ===== */
-.rodape {
-    background-color: var(--verde-principal);
-    color: var(--branco);
-    text-align: center;
-    padding: 30px;
-    font-size: 14px;
-}
-
-
-
-/* ===== HERO INTERNO DAS PÁGINAS ===== */
+/* HERO INTERNO (sobre, equipe, serviços, contato) */
 .hero-interno {
     background: linear-gradient(120deg, var(--verde-principal), #28b463);
     color: var(--branco);
@@ -330,7 +152,7 @@ main {
     line-height: 1.6;
 }
 
-/* ===== SEÇÕES INTERNAS ===== */
+/* SEÇÕES PADRÃO */
 .secao-interna {
     padding: 80px;
     background-color: #f9fdfb;
@@ -340,14 +162,14 @@ main {
     background-color: var(--verde-claro);
 }
 
-/* ===== GRID ESTILIZADO ===== */
+/* GRID PADRÃO (sobre / contato) */
 .grid-conteudo {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
 
-/* ===== CARD AVANÇADO ===== */
+/* CARD PADRÃO (sobre / contato) */
 .card-avancado {
     background-color: var(--branco);
     padding: 35px;
@@ -384,16 +206,19 @@ main {
     line-height: 1.6;
 }
 
-/* ===== LISTA DESTACADA ===== */
+/* LISTA COM CHECK (usada em várias páginas) */
 .lista-destaque {
     margin-top: 20px;
     list-style: none;
+    padding: 0;
 }
 
 .lista-destaque li {
-    padding-left: 25px;
+    padding-left: 26px;
     margin-bottom: 10px;
     position: relative;
+    font-size: 14px;
+    color: var(--cinza-texto);
 }
 
 .lista-destaque li::before {
@@ -401,4 +226,679 @@ main {
     color: var(--verde-principal);
     position: absolute;
     left: 0;
+    font-weight: bold;
 }
+
+
+/* =========================================================
+   PÁGINA: INDEX (HOME)
+========================================================= */
+
+/* HERO PRINCIPAL */
+.secao-destaque {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px;
+    background: linear-gradient(120deg, var(--verde-claro), #f7fbf9);
+}
+
+.conteudo-destaque {
+    max-width: 520px;
+}
+
+.conteudo-destaque h2 {
+    font-size: 40px;
+    color: var(--verde-principal);
+    margin-bottom: 20px;
+}
+
+.conteudo-destaque p {
+    color: var(--cinza-texto);
+    margin-bottom: 35px;
+    line-height: 1.7;
+}
+
+/* botão principal */
+.botao-principal {
+    background-color: var(--verde-principal);
+    color: var(--branco);
+    padding: 16px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+.botao-principal:hover {
+    background-color: var(--verde-escuro);
+    transform: translateY(-3px);
+    box-shadow: var(--sombra-suave);
+}
+
+/* imagem do hero */
+.imagem-destaque img {
+    max-width: 440px;
+    border-radius: 16px;
+    box-shadow: var(--sombra-suave);
+}
+
+/* BENEFÍCIOS */
+.secao-beneficios {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 60px 80px;
+    background-color: #0f2f1f;
+    color: var(--branco);
+    text-align: center;
+}
+
+.beneficio {
+    padding: 20px;
+}
+
+.beneficio h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.beneficio p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+
+/* =========================================================
+   PÁGINA: EQUIPE
+========================================================= */
+
+.grid-equipe {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+}
+
+.card-equipe {
+    background-color: var(--branco);
+    border-radius: 20px;
+    box-shadow: var(--sombra-suave);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-equipe::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(90deg, var(--verde-principal), #2ecc71);
+}
+
+.card-equipe:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+/* foto da equipe */
+.foto-equipe {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid var(--verde-principal);
+    margin-bottom: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    background-color: #f0f0f0;
+}
+
+.foto-equipe img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* infos */
+.info-equipe h3 {
+    font-size: 22px;
+    color: var(--verde-principal);
+    margin-bottom: 6px;
+}
+
+.cargo {
+    font-size: 14px;
+    color: var(--verde-escuro);
+    font-weight: 600;
+    margin-bottom: 12px;
+    display: inline-block;
+}
+
+.info-equipe p {
+    font-size: 15px;
+    color: var(--cinza-texto);
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+
+/* =========================================================
+   PÁGINA: SERVIÇOS
+========================================================= */
+
+.secao-servicos-detalhada {
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+    background-color: #f9fdfb;
+}
+
+.servico-bloco {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.servico-bloco.invertido {
+    flex-direction: row-reverse;
+}
+
+/* imagem do serviço */
+.servico-imagem {
+    flex: 1;
+}
+
+.servico-imagem img {
+    width: 100%;
+    border-radius: 18px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.servico-imagem img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 28px 55px rgba(0,0,0,0.2);
+}
+
+/* texto do serviço */
+.servico-texto {
+    flex: 1;
+}
+
+.servico-texto h3 {
+    font-size: 32px;
+    color: var(--verde-principal);
+    margin-bottom: 15px;
+}
+
+.servico-texto h3::after {
+    content: "";
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--verde-principal), #2ecc71);
+    display: block;
+    margin-top: 8px;
+    border-radius: 2px;
+}
+
+.servico-texto p {
+    font-size: 16px;
+    color: var(--cinza-texto);
+    line-height: 1.7;
+    margin: 20px 0;
+}
+
+
+/* =========================================================
+   RODAPÉ - usado em TODAS as páginas
+========================================================= */
+.rodape {
+    background-color: var(--verde-principal);
+    color: var(--branco);
+    text-align: center;
+    padding: 30px;
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   RESPONSIVO - geral do site
+========================================================= */
+
+/* tablets */
+@media (max-width: 1000px) {
+    .grid-equipe,
+    .grid-conteudo {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .servico-bloco,
+    .servico-bloco.invertido {
+        flex-direction: column;
+        gap: 35px;
+    }
+}
+
+/* celular */
+@media (max-width: 600px) {
+    .grid-equipe,
+    .grid-conteudo {
+        grid-template-columns: 1fr;
+    }
+
+    .secao-servicos-detalhada,
+    .secao-interna,
+    .hero-interno,
+    .secao-destaque {
+        padding: 50px 25px;
+    }
+
+    .foto-equipe {
+        width: 100px;
+        height: 100px;
+    }
+}
+/* ======================================================
+   ===== PÁGINA SOBRE (EXCLUSIVO - NÃO MEXER NAS OUTRAS) =====
+   ====================================================== */
+
+/* HERO SOBRE */
+.sobre-hero {
+    padding: 90px 80px;
+    background: linear-gradient(120deg, var(--verde-principal), #2ecc71);
+    color: white;
+}
+
+.sobre-hero-texto h2 {
+    font-size: 44px;
+    margin-bottom: 15px;
+}
+
+.sobre-hero-texto p {
+    max-width: 600px;
+    line-height: 1.6;
+    opacity: 0.95;
+}
+
+/* BLOCO INSTITUCIONAL */
+.sobre-institucional {
+    padding: 80px;
+    background-color: #f9fdfb;
+}
+
+.sobre-institucional-container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* imagem */
+.sobre-imagem img {
+    width: 380px;
+    border-radius: 18px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* texto */
+.sobre-texto h3 {
+    font-size: 32px;
+    color: var(--verde-principal);
+    margin-bottom: 15px;
+}
+
+.sobre-texto p {
+    font-size: 16px;
+    color: var(--cinza-texto);
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+/* NÚMEROS */
+.sobre-numeros {
+    padding: 60px 80px;
+    background-color: var(--verde-claro);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    text-align: center;
+}
+
+.numero-box {
+    background-color: white;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: var(--sombra-suave);
+    transition: transform 0.3s;
+}
+
+.numero-box:hover {
+    transform: translateY(-8px);
+}
+
+.numero-box h4 {
+    font-size: 36px;
+    color: var(--verde-principal);
+    margin-bottom: 8px;
+}
+
+.numero-box span {
+    font-size: 15px;
+    color: var(--cinza-texto);
+}
+
+/* MISSÃO / VISÃO / VALORES */
+.sobre-valores {
+    padding: 80px;
+    background-color: #ffffff;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+}
+
+.valor-card {
+    background-color: #f9fdfb;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: var(--sombra-suave);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.valor-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.12);
+}
+
+.valor-card h3 {
+    color: var(--verde-principal);
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.valor-card p,
+.valor-card li {
+    color: var(--cinza-texto);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.valor-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.valor-card li {
+    margin-bottom: 8px;
+    padding-left: 22px;
+    position: relative;
+}
+
+.valor-card li::before {
+    content: "✔";
+    color: var(--verde-principal);
+    position: absolute;
+    left: 0;
+}
+
+/* RESPONSIVO SOBRE */
+@media (max-width: 900px) {
+    .sobre-institucional-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sobre-imagem img {
+        width: 100%;
+        max-width: 420px;
+    }
+
+    .sobre-numeros,
+    .sobre-valores {
+        grid-template-columns: 1fr;
+    }
+}
+/* ======================================================
+   CONTATO - DESIGN PREMIUM
+====================================================== */
+
+.secao-contato-cards {
+    padding: 90px 80px;
+    background: linear-gradient(180deg, #f9fdfb, var(--verde-claro));
+}
+
+/* ===== ENDEREÇO CENTRAL (DESTAQUE) ===== */
+.contato-destaque {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+.card-endereco {
+    background: linear-gradient(135deg, var(--verde-principal), var(--verde-escuro));
+    color: white;
+    padding: 45px 70px;
+    border-radius: 22px;
+    text-align: center;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+    transform: translateY(-10px);
+    transition: 0.4s;
+    position: relative;
+    overflow: hidden;
+}
+
+/* brilho decorativo */
+.card-endereco::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.15), transparent 60%);
+}
+
+.card-endereco:hover {
+    transform: translateY(-18px) scale(1.02);
+}
+
+.card-endereco i {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.card-endereco h3 {
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+.card-endereco p {
+    font-size: 17px;
+    opacity: 0.95;
+}
+
+/* ===== GRID DOS OUTROS CONTATOS ===== */
+.grid-contato {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+/* ===== CARDS NORMAIS ===== */
+.card-contato {
+    background: white;
+    padding: 30px 25px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: var(--sombra-suave);
+    transition: 0.35s;
+    position: relative;
+    overflow: hidden;
+}
+
+/* efeito de borda tech */
+.card-contato::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    padding: 2px;
+    background: linear-gradient(120deg, transparent, var(--verde-principal), transparent);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.card-contato:hover::before {
+    opacity: 1;
+}
+
+.card-contato:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 22px 50px rgba(0,0,0,0.15);
+}
+
+/* ícone */
+.card-contato i {
+    font-size: 34px;
+    color: var(--verde-principal);
+    margin-bottom: 14px;
+    transition: 0.3s;
+}
+
+.card-contato:hover i {
+    transform: scale(1.15);
+    color: var(--verde-escuro);
+}
+
+/* título */
+.card-contato h3 {
+    font-size: 19px;
+    color: var(--verde-principal);
+    margin-bottom: 6px;
+}
+
+/* texto */
+.card-contato p {
+    font-size: 14.5px;
+    color: var(--cinza-texto);
+    line-height: 1.5;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 1000px) {
+    .grid-contato {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card-endereco {
+        width: 100%;
+        padding: 35px;
+    }
+}
+
+@media (max-width: 600px) {
+    .grid-contato {
+        grid-template-columns: 1fr;
+    }
+
+    .secao-contato-cards {
+        padding: 50px 25px;
+    }
+}
+
+/* =========================
+   CONTATO - MTG
+========================= */
+
+.secao-contato {
+    padding: 70px 8%;
+    background: #f5f9f7;
+    text-align: center;
+}
+
+/* Endereço central */
+.card-endereco {
+    max-width: 420px;
+    margin: 0 auto 50px auto;
+    padding: 28px;
+    border-radius: 16px;
+    background: #2e8b57; /* verde padrão */
+    color: white;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+.card-endereco i {
+    font-size: 34px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.card-endereco:hover {
+    transform: translateY(-6px);
+}
+
+/* Grid dos cards */
+.grid-contato {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+}
+
+/* Cards */
+.card-contato {
+    background: #2e8b57; /* verde padrão */
+    color: white;
+    border-radius: 16px;
+    padding: 26px 20px;
+    text-decoration: none;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    transition: 0.25s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hover */
+.card-contato:hover {
+    transform: translateY(-8px);
+    background: #60a07d; /* verde mais escuro */
+}
+
+/* Ícones */
+.card-contato i {
+    font-size: 32px;
+    margin-bottom: 12px;
+    color: white;
+}
+
+.card-contato h3 {
+    font-size: 18px;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: black;
+}
+
+.card-contato span {
+    font-size: 14px;
+    opacity: 0.85;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .secao-contato {
+        padding: 50px 6%;
+    }
+}
+
