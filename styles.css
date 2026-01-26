@@ -375,3 +375,174 @@ main {
         font-size: 34px;
     }
 }
+
+
+/* ==================================================
+   ANIMAÇÕES GLOBAIS
+================================================== */
+* {
+    transition: color 0.25s ease, 
+                background-color 0.25s ease, 
+                transform 0.25s ease, 
+                box-shadow 0.25s ease;
+}
+
+/* animações base */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeRight {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ==================================================
+   HEADER – MAIS VIDA
+================================================== */
+.cabecalho {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(8px);
+}
+
+.menu-navegacao a:hover {
+    color: var(--verde);
+    transform: translateY(-2px);
+}
+
+.botao-contato:hover {
+    background: var(--verde-escuro);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+}
+
+/* ==================================================
+   HERO – ENTRADA IMPACTANTE
+================================================== */
+.hero-home h2 {
+    animation: fadeUp 0.9s ease forwards;
+}
+
+.hero-home p {
+    animation: fadeUp 1.2s ease forwards;
+}
+
+.botao-principal {
+    animation: fadeUp 1.4s ease forwards;
+}
+
+.botao-principal:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.25);
+}
+
+/* ==================================================
+   CARDS – GLASS PREMIUM
+================================================== */
+.card-glass {
+    animation: fadeUp 0.9s ease forwards;
+}
+
+.card-glass:hover {
+    transform: translateY(-14px) scale(1.03);
+    box-shadow: 0 30px 70px rgba(0,0,0,0.28);
+    background: rgba(255,255,255,0.78);
+}
+
+/* ==================================================
+   SERVIÇOS – ANIMAÇÃO LATERAL
+================================================== */
+.secao-servico {
+    animation: fadeUp 1s ease forwards;
+}
+
+.secao-servico:not(.invertido) .servico-texto {
+    animation: fadeLeft 1s ease forwards;
+}
+
+.secao-servico.invertido .servico-texto {
+    animation: fadeRight 1s ease forwards;
+}
+
+.servico-imagem img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 35px 70px rgba(0,0,0,0.35);
+}
+
+/* ==================================================
+   CARROSSEL – MAIS SUAVE
+================================================== */
+.carrossel {
+    scroll-behavior: smooth;
+}
+
+.slide {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.slide:hover {
+    transform: scale(1.08);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.35);
+}
+
+/* ==================================================
+   CONTATO – EFEITO PREMIUM
+================================================== */
+.endereco-info {
+    animation: fadeLeft 1s ease forwards;
+}
+
+.endereco-info:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 30px 70px rgba(0,0,0,0.35);
+}
+
+.contato-card {
+    animation: fadeUp 1s ease forwards;
+}
+
+.contato-card:hover {
+    transform: translateY(-10px) scale(1.04);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.3);
+}
+
+.contato-card i {
+    transition: transform 0.3s ease;
+}
+
+.contato-card:hover i {
+    transform: scale(1.2);
+}
+
+/* ==================================================
+   RODAPÉ – FECHAMENTO SUAVE
+================================================== */
+.rodape {
+    animation: fadeUp 1.2s ease forwards;
+}
