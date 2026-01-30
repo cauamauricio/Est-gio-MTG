@@ -973,7 +973,8 @@ main {
 .sobre-hero {
     position: relative;
     height: 320px;
-    background: var(--verde) url("./image/hero-sobre.jpg") center/cover no-repeat;
+    background: var(--verde)
+    url("./image/hero-sobre.jpg") center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1256,5 +1257,4 @@ main {
     background: #ffffff;
     box-shadow: 0 16px 36px rgba(0,0,0,0.35);
 }
-
 
