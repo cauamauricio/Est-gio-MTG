@@ -52,10 +52,28 @@ main {
 }
 
 /* LOGO */
+/* LOGO + FRASE – COLADAS */
 .logo-clinica {
     display: flex;
     align-items: center;
+    gap: 6px;              /* 🔑 distância mínima entre logo e frase */
 }
+
+/* LOGO MTG */
+.logo-clinica img:first-child {
+    height: 100px;        /* ajuste se quiser */
+    width: auto;
+    margin-right: 0;      /* garante zero espaço */
+}
+
+/* FRASE */
+.logo-clinica img:last-child {
+    height:56px;         /* proporcional à logo */
+    width: auto;
+    margin-left: -30px;    /*  puxa a frase para colar ainda mais */
+    margin-top: 5px;     /*  ajusta verticalmente */
+}
+
 
 /* LOGO – AJUSTE VISUAL REAL */
 .logo-imagem {
@@ -569,4 +587,391 @@ main {
 ================================================== */
 .rodape {
     animation: fadeUp 1.2s ease forwards;
+}
+
+/* ==================================================
+   HERO SERVIÇOS
+================================================== */
+.hero-servicos {
+    position: relative;
+    height: 300px;
+    background: url("./image/hero-servicos.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay-verde {
+    position: absolute;
+    inset: 0;
+    background:var(--verde);
+}
+
+.hero-servicos-conteudo {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-servicos h1 {
+    color: #fff;
+    font-size: 46px;
+    font-weight: 700;
+}
+
+/* ==================================================
+   TEXTO INTRO SERVIÇOS
+================================================== */
+.secao-texto-servicos {
+    max-width: 1000px;
+    margin: 80px auto 40px;
+    padding: 0 25px;
+}
+
+.secao-texto-servicos h2 {
+    color: var(--verde);
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.secao-texto-servicos p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #333;
+}
+
+/* ==================================================
+   LISTA DE SERVIÇOS
+================================================== */
+.secao-servicos-lista {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 25px 90px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.card-servico {
+    background: #fff;
+    border-radius: 18px;
+    padding: 36px;
+    box-shadow: 0 18px 45px rgba(0,0,0,0.12);
+    transition: 0.4s;
+}
+
+.card-servico:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 28px 65px rgba(0,0,0,0.18);
+}
+
+.card-servico h3 {
+    color: var(--verde);
+    font-size: 20px;
+    margin-bottom: 14px;
+}
+
+.card-servico p {
+    font-size: 15px;
+    color: #444;
+    margin-bottom: 18px;
+}
+
+.card-servico ul {
+    padding-left: 18px;
+    margin-bottom: 22px;
+}
+
+.card-servico li {
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+.botao-secundario {
+    display: inline-block;
+    background: var(--verde);
+    color: #fff;
+    padding: 10px 22px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.botao-secundario:hover {
+    background: var(--verde-escuro);
+}
+
+/* ==================================================
+   SERVIÇOS – PADRÃO CLÍNICO PROFISSIONAL
+================================================== */
+.secao-servicos-detalhados {
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 0 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.servico-box {
+    background: #fff;
+    border: 1px solid #e2e2e2;
+    border-radius: 10px;
+    padding: 28px 30px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+/* HEADER DO CARD */
+.servico-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 14px;
+}
+
+.servico-header img {
+    width: 34px;
+    height: auto;
+}
+
+.servico-header h3 {
+    font-size: 20px;
+    color: #1f7a3f;
+}
+
+/* TEXTO */
+.servico-box p {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 14px;
+}
+
+/* LISTA VERDE */
+.lista-servico {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 18px;
+}
+
+.lista-servico li {
+    font-size: 14px;
+    color: #1f7a3f;
+    margin-bottom: 6px;
+    position: relative;
+    padding-left: 18px;
+}
+
+.lista-servico li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #1f9d55;
+    font-size: 12px;
+}
+
+/* BOTÃO */
+.btn-servico {
+    display: inline-block;
+    background: #1f7a3f;
+    color: #fff;
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.btn-servico:hover {
+    background: #145c2f;
+}
+
+/* ==================================================
+   EFEITOS PREMIUM – MTG
+================================================== */
+
+/* ========= LOGO ========= */
+.logo-clinica img {
+    transition: transform .4s ease, filter .4s ease;
+}
+
+.logo-clinica:hover img:first-child {
+    transform: scale(1.04);
+}
+
+.logo-clinica:hover img:last-child {
+    filter: drop-shadow(0 6px 12px rgba(31,157,85,.45));
+}
+
+/* ========= MENU ========= */
+.menu-navegacao li {
+    position: relative;
+}
+
+.menu-navegacao a::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--verde), #2ecc71);
+    border-radius: 6px;
+    transition: width .35s ease;
+}
+
+.menu-navegacao a:hover::after {
+    width: 100%;
+}
+
+/* ========= BOTÃO CONTATO ========= */
+.botao-contato {
+    box-shadow: 0 10px 25px rgba(31,157,85,.35);
+}
+
+.botao-contato:hover {
+    box-shadow: 0 18px 45px rgba(31,157,85,.55);
+    transform: translateY(-3px);
+}
+
+/* ========= HERO ========= */
+.hero-home::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, rgba(255,255,255,.06), transparent 60%);
+    pointer-events: none;
+}
+
+.hero-home h2 {
+    text-shadow: 0 10px 30px rgba(0,0,0,.25);
+}
+
+.hero-home p {
+    text-shadow: 0 6px 20px rgba(0,0,0,.18);
+}
+
+/* ========= BOTÃO HERO ========= */
+.botao-principal {
+    box-shadow: 0 18px 45px rgba(0,0,0,.25);
+}
+
+.botao-principal:hover {
+    box-shadow: 0 28px 65px rgba(0,0,0,.35);
+}
+
+/* ========= CARDS HOME ========= */
+.card-glass::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, rgba(31,157,85,.12), transparent 70%);
+    opacity: 0;
+    transition: opacity .4s ease;
+}
+
+.card-glass:hover::before {
+    opacity: 1;
+}
+
+/* ========= SEÇÃO SERVIÇOS (IMAGEM) ========= */
+.servico-imagem img {
+    transition: transform .5s ease, box-shadow .5s ease;
+}
+
+.servico-imagem img:hover {
+    transform: scale(1.08) rotate(.3deg);
+}
+
+/* ========= CARROSSEL ========= */
+.carrossel::-webkit-scrollbar {
+    height: 10px;
+}
+
+.carrossel::-webkit-scrollbar-track {
+    background: rgba(255,255,255,.15);
+    border-radius: 20px;
+}
+
+.carrossel::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, var(--verde), #2ecc71);
+    border-radius: 20px;
+}
+
+.slide::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    box-shadow: inset 0 0 0 1px rgba(31,157,85,.35);
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+
+.slide:hover::after {
+    opacity: 1;
+}
+
+/* ========= SERVIÇOS DETALHADOS ========= */
+.servico-box {
+    position: relative;
+    overflow: hidden;
+}
+
+.servico-box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, rgba(31,157,85,.08), transparent 70%);
+    opacity: 0;
+    transition: opacity .4s ease;
+}
+
+.servico-box:hover::before {
+    opacity: 1;
+}
+
+.servico-box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 22px 55px rgba(0,0,0,.18);
+}
+
+/* ========= LISTA VERDE ========= */
+.lista-servico li {
+    transition: transform .25s ease, color .25s ease;
+}
+
+.lista-servico li:hover {
+    transform: translateX(6px);
+    color: var(--verde-escuro);
+}
+
+/* ========= BOTÃO SERVIÇO ========= */
+.btn-servico {
+    box-shadow: 0 10px 28px rgba(31,157,85,.35);
+}
+
+.btn-servico:hover {
+    box-shadow: 0 20px 50px rgba(31,157,85,.55);
+    transform: translateY(-2px);
+}
+
+/* ========= CONTATO ========= */
+.contato-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 18px;
+    background: linear-gradient(120deg, rgba(31,157,85,.12), transparent 70%);
+    opacity: 0;
+    transition: opacity .4s ease;
+}
+
+.contato-card:hover::before {
+    opacity: 1;
+}
+
+/* ========= RODAPÉ ========= */
+.rodape {
+    box-shadow: inset 0 12px 30px rgba(0,0,0,.25);
 }

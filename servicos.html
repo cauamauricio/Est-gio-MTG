@@ -2,7 +2,8 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Serviços | MTG</title>
+    <title>Serviços | MTG - Medicina do Trabalho de Guanambi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -10,12 +11,11 @@
 <header class="cabecalho">
     <div class="container-cabecalho">
         <div class="logo-clinica">
-            <img src="./image/mtglogo.png" alt="Logo MTG" class="logo-imagem">
-            <div class="texto-logo">
-                 <h1>Medicina do Trabalho de Guanambi</h1>
-            </div>
+            <img src="./image/mtglogo.png" alt="MTG" class="logo-imagem">
+            <img src="./image/frasemtglogo.png" alt="Medicina do Trabalho de Guanambi" class="logo-frase">
         </div>
-        <nav class="navegacao-principal">
+
+        <nav>
             <ul class="menu-navegacao">
                 <li><a href="index.html">Início</a></li>
                 <li><a href="servicos.html">Serviços</a></li>
@@ -25,53 +25,185 @@
         </nav>
     </div>
 </header>
+
 <main>
-<!-- HERO DA PÁGINA -->
-<section class="hero-interno">
-    <h2>Nossos Serviços</h2>
+
+<!-- HERO SERVIÇOS -->
+<section class="hero-servicos">
+    <div class="overlay-verde"></div>
+    <div class="hero-servicos-conteudo">
+        <h1>Serviços</h1>
+    </div>
+</section>
+
+<!-- INTRODUÇÃO -->
+<section class="secao-texto-servicos">
+    <h2>Medicina do Trabalho</h2>
     <p>
-        Soluções completas em medicina do trabalho para garantir
-        segurança, saúde ocupacional e conformidade legal.
+        A Medicina do Trabalho ou Medicina Ocupacional é a área que busca garantir a qualidade de vida
+        dos trabalhadores, prevenindo acidentes e doenças ocupacionais, assegurando conformidade legal
+        e melhoria contínua no ambiente profissional.
     </p>
 </section>
 
-<!-- CONTEÚDO -->
-<section class="secao-interna">
-    <div class="grid-conteudo">
+<!-- LISTA DE SERVIÇOS -->
+<section class="secao-servicos-detalhados">
 
-        <div class="card-avancado">
-            <h3>Exames Ocupacionais</h3>
-            <p>Realizamos todos os exames exigidos pela legislação trabalhista.</p>
-            <ul class="lista-destaque">
-                <li>Admissional</li>
-                <li>Periódico</li>
-                <li>Demissional</li>
-                <li>Retorno ao trabalho</li>
-            </ul>
+    <!-- CARD -->
+    <div class="servico-box">
+        <div class="servico-header">
+            <img src="./image/icon-clinico.png" alt="Ícone Clínico">
+            <h3>Análises Clínicas</h3>
         </div>
 
-        <div class="card-avancado">
-            <h3>PCMSO</h3>
-            <p>Programa elaborado conforme a NR-7, com acompanhamento contínuo.</p>
-            <ul class="lista-destaque">
-                <li>Análise de riscos</li>
-                <li>Planejamento anual</li>
-                <li>Controle médico</li>
-            </ul>
-        </div>
+        <p>
+            As análises clínicas permitem diagnosticar a saúde do colaborador por meio de exames
+            laboratoriais realizados conforme protocolos técnicos e exigências legais.
+        </p>
 
-        <div class="card-avancado">
-            <h3>ASO e Laudos</h3>
-            <p>Documentação técnica com segurança jurídica para empresas.</p>
-            <ul class="lista-destaque">
-                <li>ASO</li>
-                <li>Relatórios técnicos</li>
-                <li>Avaliações clínicas</li>
-            </ul>
-        </div>
+        <ul class="lista-servico">
+            <li>Hemograma completo</li>
+            <li>Glicemia</li>
+            <li>Colesterol total e frações</li>
+            <li>Triglicerídeos</li>
+            <li>Exames toxicológicos</li>
+            <li>Exames admissionais e periódicos</li>
+        </ul>
 
+        <a href="contato.html" class="btn-servico">Fale Conosco</a>
     </div>
+
+    <!-- CARD -->
+    <div class="servico-box">
+        <div class="servico-header">
+            <img src="./image/icon-audio.png" alt="Ícone Audiometria">
+            <h3>Audiometria</h3>
+        </div>
+
+        <p>
+            Exame ocupacional destinado à avaliação da audição dos colaboradores expostos a ruídos,
+            atendendo às normas regulamentadoras vigentes.
+        </p>
+
+        <ul class="lista-servico">
+            <li>Audiometria admissional</li>
+            <li>Audiometria periódica</li>
+            <li>Audiometria demissional</li>
+            <li>Laudos técnicos conforme NR-7</li>
+        </ul>
+
+        <a href="contato.html" class="btn-servico">Fale Conosco</a>
+    </div>
+
+    <!-- CARD -->
+    <div class="servico-box">
+        <div class="servico-header">
+            <img src="./image/icon-oftalmo.png" alt="Ícone Oftalmologia">
+            <h3>Avaliação Oftalmológica</h3>
+        </div>
+
+        <p>
+            Avaliação clínica da visão com foco na prevenção de riscos ocupacionais e
+            garantia da aptidão visual do trabalhador.
+        </p>
+
+        <ul class="lista-servico">
+            <li>Acuidade visual</li>
+            <li>Visão cromática</li>
+            <li>Campo visual</li>
+            <li>Laudo ocupacional</li>
+        </ul>
+
+        <a href="contato.html" class="btn-servico">Fale Conosco</a>
+    </div>
+
+    <!-- CARD -->
+    <div class="servico-box">
+        <div class="servico-header">
+            <img src="./image/icon-psi.png" alt="Ícone Psicologia">
+            <h3>Avaliação Psicológica</h3>
+        </div>
+
+        <p>
+            Avaliação psicológica ocupacional realizada conforme critérios técnicos,
+            auxiliando na prevenção de riscos psicossociais.
+        </p>
+
+        <ul class="lista-servico">
+            <li>Entrevista clínica</li>
+            <li>Testes psicológicos</li>
+            <li>Avaliação de aptidão</li>
+            <li>Laudo psicológico ocupacional</li>
+        </ul>
+
+        <a href="contato.html" class="btn-servico">Fale Conosco</a>
+    </div>
+
+        <div class="servico-box">
+        <div class="servico-header">
+            <img src="./image/icon-psi.png" alt="Ícone Psicologia">
+            <h3>Avaliação Psicológica</h3>
+        </div>
+
+        <p>
+            Avaliação psicológica ocupacional realizada conforme critérios técnicos,
+            auxiliando na prevenção de riscos psicossociais.
+        </p>
+
+        <ul class="lista-servico">
+            <li>Entrevista clínica</li>
+            <li>Testes psicológicos</li>
+            <li>Avaliação de aptidão</li>
+            <li>Laudo psicológico ocupacional</li>
+        </ul>
+
+        <a href="contato.html" class="btn-servico">Fale Conosco</a>
+    </div>
+
+        <div class="servico-box">
+        <div class="servico-header">
+            <img src="./image/icon-psi.png" alt="Ícone Psicologia">
+            <h3>Avaliação Psicológica</h3>
+        </div>
+
+        <p>
+            Avaliação psicológica ocupacional realizada conforme critérios técnicos,
+            auxiliando na prevenção de riscos psicossociais.
+        </p>
+
+        <ul class="lista-servico">
+            <li>Entrevista clínica</li>
+            <li>Testes psicológicos</li>
+            <li>Avaliação de aptidão</li>
+            <li>Laudo psicológico ocupacional</li>
+        </ul>
+
+        <a href="contato.html" class="btn-servico">Fale Conosco</a>
+    </div>
+
+        <div class="servico-box">
+        <div class="servico-header">
+            <img src="./image/icon-psi.png" alt="Ícone Psicologia">
+            <h3>Avaliação Psicológica</h3>
+        </div>
+
+        <p>
+            Avaliação psicológica ocupacional realizada conforme critérios técnicos,
+            auxiliando na prevenção de riscos psicossociais.
+        </p>
+
+        <ul class="lista-servico">
+            <li>Entrevista clínica</li>
+            <li>Testes psicológicos</li>
+            <li>Avaliação de aptidão</li>
+            <li>Laudo psicológico ocupacional</li>
+        </ul>
+
+        <a href="contato.html" class="btn-servico">Fale Conosco</a>
+    </div>
+
 </section>
+
 
 </main>
 
